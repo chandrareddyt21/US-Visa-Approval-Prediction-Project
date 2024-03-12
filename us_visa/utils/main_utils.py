@@ -15,7 +15,7 @@ def read_yaml_file(file_path: str) -> dict:
     except Exception as e:
         raise USvisaException(e, sys) from e
 
-def write_yaml_file(file_path: str, content: object, replace: bool = Flase) -> None:
+def write_yaml_file(file_path: str, content: object, replace: bool = False) -> None:
     try:
         if replace:
             if os.path.exists(file_path):
